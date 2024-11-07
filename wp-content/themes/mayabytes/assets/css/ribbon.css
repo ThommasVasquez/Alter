@@ -1,0 +1,134 @@
+.ribbon_badge {
+    position: fixed;
+    z-index: 22;
+    transition: 0.5s;
+    top: -4vw;
+    right: 10vw;
+}
+.ribbon_badge.active {
+    top: 0;
+}
+
+.ribbon {
+    font-size: 0.9rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: url(../../../../../../dev.mayabytes.com/mayabytes/v1/assets/images/ribbon.html) no-repeat center top;
+    background-size: contain;
+    width: 2vw;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+     height: 4vw; 
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+
+.ribbon_badge.active .ribbon {
+    height: 4vw;
+}
+
+.ribbon_badge.active:hover .ribbon_tooltip {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.ribbon_badge .ribbon_tooltip {
+    background: #fff;
+    padding: 1.1vw;
+    font-size: 0.9rem;
+    border-radius: 0.2vw;
+    font-family: Roboto, sans-serif;
+    position: absolute;
+    right: -0.5vw;
+    min-width: 9.4vw;
+    top: 5vw;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.ribbon_badge .ribbon_tooltip .title {
+    font-weight: 600;
+    margin-bottom: 0.4vw;
+    line-height: 1rem;
+    font-size: 0.8rem;
+}
+
+.ribbon_badge .ribbon_tooltip .desc {
+    font-weight: 400;
+    font-size: 0.59rem;
+    line-height: 0.65rem;
+}
+
+.ribbon_badge .ribbon_tooltip:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 1vw;
+    top: -0.75vw;
+    border-bottom: 0.5vw solid #fff;
+    border-right: 0.5vw solid transparent;
+    border-top: 0.25vw solid transparent;
+    border-left: 0.5vw solid transparent;
+}
+
+
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .ribbon_badge {
+        right: 30px;
+        top: 62px;
+    }
+
+    .ribbon_badge.active .ribbon {
+        height: 56px;
+        width: 30px;
+        font-size: 15px;
+    }
+
+    .ribbon_badge .ribbon_tooltip {
+        font-size: 14px;
+        border-radius: 5px;
+        min-width: 180px;
+        top: 70px;
+        padding: 14px;
+        right: -4px;
+    }
+
+    .ribbon_badge .ribbon_tooltip .title {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .ribbon_badge .ribbon_tooltip .desc {
+        font-size: 12px;
+    }
+
+    .ribbon_badge .ribbon_tooltip:before {
+        right: 9px;
+        top: -14px;
+        border-bottom: 10px solid #fff;
+        border-right: 10px solid transparent;
+        border-top: 5px solid transparent;
+        border-left: 10px solid transparent;
+    }
+
+
+}
